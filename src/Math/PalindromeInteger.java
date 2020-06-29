@@ -17,6 +17,11 @@ package Math;
 
 public class PalindromeInteger {
 
+    /**
+     * Reverse a number
+     * @param A
+     * @return
+     */
     private int getReverseNumber(int A){
         if(A == 0)  return 0;
         int reverse = 0;
@@ -28,6 +33,11 @@ public class PalindromeInteger {
         return reverse;
     }
 
+    /**
+     * Check, whether a number is palindrome number or not
+     * @param A
+     * @return
+     */
     public int isPalindrome(int A) {
         return A == getReverseNumber(A) ? 1 : 0;
     }

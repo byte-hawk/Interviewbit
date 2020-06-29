@@ -17,7 +17,12 @@ package Math;
 
 public class GCD {
 
-    //  Euclidean algorithm for GCD is O(log n) time complexity
+    /**
+     * Euclidean algorithm for GCD in O(log n) time complexity
+     * @param A
+     * @param B
+     * @return
+     */
     public int gcd(int A, int B) {
 
         // A should be always bigger

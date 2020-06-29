@@ -29,6 +29,11 @@ package Math;
 
 public class TrailingZerosInFactorial {
 
+    /**
+     * FInd number of trailing zeros in A!
+     * @param A
+     * @return
+     */
     public int trailingZeroes(int A) {
 
         int trailingZeros = 0;

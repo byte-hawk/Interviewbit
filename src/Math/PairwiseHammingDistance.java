@@ -27,6 +27,11 @@ import java.util.List;
 
 public class PairwiseHammingDistance {
 
+    /**
+     * FInd sum of hamming distance of all pairs of an array
+     * @param A
+     * @return
+     */
     public int hammingDistance(final List<Integer> A) {
         int M = 1000000007;
         long hd = 0, n = A.size(), count;

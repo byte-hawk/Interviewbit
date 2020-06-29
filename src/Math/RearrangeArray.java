@@ -15,6 +15,10 @@ import java.util.ArrayList;
 
 public class RearrangeArray {
 
+    /**
+     * Rearrange a given array so that Arr[i] becomes Arr[Arr[i]]
+     * @param a
+     */
     public void arrange(ArrayList<Integer> a) {
         int n = a.size();
         // Let’s assume there are 2 numbers a and b, both are smaller than n. If a is incremented by b*n, it becomes (a + b*n)

@@ -16,6 +16,11 @@ package Math;
 
 public class ReverseInteger {
 
+    /**
+     * Reverse an integer
+     * @param A
+     * @return
+     */
     public int reverse(int A) {
 
         int sign = A / Math.abs(A);

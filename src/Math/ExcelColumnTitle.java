@@ -16,6 +16,11 @@ package Math;
 
 public class ExcelColumnTitle {
 
+    /**
+     * Get Excel column title from the column number
+     * @param A
+     * @return
+     */
     public String convertToTitle(int A) {
         StringBuilder sb = new StringBuilder();
         while(A>0) {

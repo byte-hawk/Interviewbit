@@ -15,12 +15,24 @@ package Math;
 
 public class LargestCoprimeDivisor {
 
+    /**
+     * Euclidean algorithm for GCD of a & b
+     * @param a
+     * @param b
+     * @return
+     */
     private int gcd(int a, int b){
         if(a < b)   return gcd(b , a);
         if(b == 0)    return a;
         return gcd(b, a % b);
     }
 
+    /**
+     * Find largest co-prime divisor of A & B
+     * @param A
+     * @param B
+     * @return
+     */
     public int cpFact(int A, int B) {
         // Remove the common factors of A and B from A by
         // diving A with the GCD of A & B

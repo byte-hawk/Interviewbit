@@ -12,6 +12,12 @@ package Math;
 
 public class PowerOf2Integers {
 
+    /**
+     * Calculate a^p
+     * @param a
+     * @param p
+     * @return
+     */
     private int pow(int a, int p) {
         int pow = 1;
         while(p>0) {
@@ -25,6 +31,11 @@ public class PowerOf2Integers {
         return pow;
     }
 
+    /**
+     * Check, whether A can be expressed as A^P where P > 1 and A > 0
+     * @param A
+     * @return
+     */
     public int isPower(int A) {
         if(A == 1)  return 1;
         int isPower = 0, limit = (int) Math.ceil(Math.log(A) / Math.log(2));

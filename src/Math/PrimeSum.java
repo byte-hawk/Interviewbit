@@ -23,6 +23,11 @@ import java.util.Arrays;
 
 public class PrimeSum {
 
+    /**
+     * Calculate sieve of Erasthomas
+     * @param num
+     * @return
+     */
     private boolean[] getPrimeSieve(int num) {
         boolean primeSieve[] = new boolean[num+1];
         // Initialize sieve array with true
@@ -39,6 +44,11 @@ public class PrimeSum {
         return primeSieve;
     }
 
+    /**
+     * Get 2 prime numbers whose sum will be equal to A
+     * @param A
+     * @return
+     */
     public ArrayList<Integer> primeSum(int A) {
         boolean found = false;
         boolean primeSieve[] = getPrimeSieve(A);

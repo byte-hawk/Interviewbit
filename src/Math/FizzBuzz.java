@@ -20,6 +20,11 @@ import java.util.ArrayList;
 
 public class FizzBuzz {
 
+    /**
+     * Create the fizzbuzz sequence
+     * @param A
+     * @return
+     */
     public ArrayList<String> fizzBuzz(int A) {
         ArrayList<String> fbs = new ArrayList<>();
         for(int i =1; i<=A; i++) {

@@ -24,6 +24,12 @@ package Math;
 
 public class GridUniquePaths {
 
+    /**
+     * Count total number of unique paths from top-left to bottom-right inside a grid
+     * @param A
+     * @param B
+     * @return
+     */
     public int uniquePaths(int A, int B) {
         int dp[][] = new int[A][B];
 
