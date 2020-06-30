@@ -14,6 +14,14 @@ package Math;
 import java.util.ArrayList;
 
 public class RearrangeArray {
+    /*
+    Approach:
+        Let’s assume there are 2 numbers a and b, both are smaller than n. If a is incremented by b*n, it becomes (a + b*n)
+        Now, (a + b*n) / n => b and (a + b*n) % n => a.
+
+        So, we will add Arr[Arr[i]] * n with Arr[i] in the first step &
+        In the second step, we will divide every number by n
+     */
 
     /**
      * Rearrange a given array so that Arr[i] becomes Arr[Arr[i]]
@@ -21,8 +29,7 @@ public class RearrangeArray {
      */
     public void arrange(ArrayList<Integer> a) {
         int n = a.size();
-        // Let’s assume there are 2 numbers a and b, both are smaller than n. If a is incremented by b*n, it becomes (a + b*n)
-        // Now, (a + b*n) / n => b and (a + b*n) % n => a.
+
         for(int i = 0; i < n; i++) {
             int add = (a.get(a.get(i)) % n) * n;
             a.set(i, a.get(i) + add);

@@ -14,6 +14,11 @@ X = 5
 package Math;
 
 public class LargestCoprimeDivisor {
+    /*
+    Approach :
+        Remove the common factors of A and B from A by
+        diving A with the GCD of A & B
+    */
 
     /**
      * Euclidean algorithm for GCD of a & b
@@ -34,8 +39,6 @@ public class LargestCoprimeDivisor {
      * @return
      */
     public int cpFact(int A, int B) {
-        // Remove the common factors of A and B from A by
-        // diving A with the GCD of A & B
         int g = gcd(A , B);
         if(g == 1)  return A;
         return cpFact(A / g, B);

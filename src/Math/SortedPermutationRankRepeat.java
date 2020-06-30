@@ -18,28 +18,27 @@ NOTE: 1000003 is a prime number
 NOTE: Assume the number of characters in string < 1000003
  */
 
-/*
-Approach:
-Sample Input: "settle"
-Algorithm:
-Character | Smaller char on right  |  Repeated char on right |  Permutations
-                                        (including current)
-
-    s         3(e,l,e)                  2e, 2t                  (3X5!)/(2!X2!)
-    e         0                         2e, 2t                  (0X4!)/(2!X2!)
-    t         2(l,e)                    2t                      (2X3!)/(2!)
-    t         2(l,e)                      -                     (2X2!)/(0!)
-    L         1(e)                        -                     (1X1!)/(0!)
-    e         0                           -                     (0X0!)/(0!)
-
-Rank of the string: (3X5!)/(2!X2!) + (0X4!)/(2!X2!) + (2X3!)/(2!) + (2X2!)/(0!) + (1X1!)/(0!) + (0X0!)/(0!)
- */
-
 package Math;
 import java.util.*;
 import java.math.*;
 
 public class SortedPermutationRankRepeat {
+    /*
+    Approach:
+        Sample Input: "settle"
+        Algorithm:
+        Character | Smaller char on right  |  Repeated char on right |  Permutations
+                                                (including current)
+
+            s         3(e,l,e)                  2e, 2t                  (3X5!)/(2!X2!)
+            e         0                         2e, 2t                  (0X4!)/(2!X2!)
+            t         2(l,e)                    2t                      (2X3!)/(2!)
+            t         2(l,e)                      -                     (2X2!)/(0!)
+            L         1(e)                        -                     (1X1!)/(0!)
+            e         0                           -                     (0X0!)/(0!)
+
+        Rank of the string: (3X5!)/(2!X2!) + (0X4!)/(2!X2!) + (2X3!)/(2!) + (2X2!)/(0!) + (1X1!)/(0!) + (0X0!)/(0!)
+     */
 
     private static final int M = 1000003;
 

@@ -18,22 +18,20 @@ cba
 The answer might not fit in an integer, so return your answer % 1000003
  */
 
-/*
-Approach:
-
-lets consider the input as "STRING"
-At first, we need to calculate the count of smaller characters on the right for every character.
-Input =>  S T R I N G
-Count =>  4 4 3 1 1 0
-S has 4 smaller characters on right: R,I,N,G; So there can be 4 * 5! smaller strings where first character is smaller than 'S'.
-Similarly, we can calculate count of smaller characters and their contribution for other characters.
-
-So rank of the current string will be= 4X5! + 4X4! + 3X3! + 1X2! + 1X1! + 0X0!
- */
-
 package Math;
 
 public class SortedPermutationRank {
+    /*
+    Approach:
+        Lets consider the input as "STRING"
+        At first, we need to calculate the count of smaller characters on the right for every character.
+        Input =>  S T R I N G
+        Counts => 4 4 3 1 1 0
+        S has 4 smaller characters on right: R,I,N,G; So there can be 4 * 5! smaller strings where first character is smaller than 'S'.
+        Similarly, we can calculate count of smaller characters and their contribution for other characters.
+
+        So rank of the current string will be= 4X5! + 4X4! + 3X3! + 1X2! + 1X1! + 0X0!
+     */
 
     private static int M=1000003;
 
