@@ -37,7 +37,7 @@ import java.util.List;
 public class SingleNumberII {
     /*
     Approach :
-        Take sum of set its in each of 32 positions(As integer is of 32 bits).
+        For each of 32 bit(As integer is of 32 bits) positions, take count of numbers in the array, for which that bit is set.
         If the count is not divisible by 3,
         then that bit is set for the single number.
      */
