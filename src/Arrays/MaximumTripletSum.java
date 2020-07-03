@@ -49,12 +49,13 @@ import java.util.TreeSet;
 public class MaximumTripletSum {
     /*
     Approach:
-        We need to traverse the array and get 2 numbers to get the sum including current element element:
-            1. maximum element on the left side, which is smaller than current element.
+        We need to traverse the array and for every element, get 2 numbers such that the sum becomes maximum:
+            1. Maximum element on the left side, which is smaller than current element.
             2. Maximum element on right side, which is bigger than current element.
 
-            For #1, we can leverage lower() method of TreeSet in Java, Time complexity is O(log n) for every element
-            For #2, we can use rMax array, which contains maximum element found so far from right to left manner, Time complexity: O(1) for every element
+            For #1, we can leverage lower() method of TreeSet in Java,which returns a value strictly lesser than the given input. Time complexity: O(log n).
+            For #2, we preprocess the input array and create another array called rMax. We traverse the input array from right side and insert maximum element found so far in this array.
+            Searching the maximum element on the right side of a specific position will then become a constant time lookup in the rMax array.
      */
 
     public int solve(ArrayList<Integer> A) {
